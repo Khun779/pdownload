@@ -6,6 +6,7 @@ def download_video(url, output_path):
         'outtmpl': os.path.join(output_path, '%(title)s.%(ext)s'),
         'format': 'bestvideo+bestaudio/best',
         'merge_output_format': 'mkv',
+        'cookiefile': 'path/to/your/cookies.txt',
     }
 
     try:
