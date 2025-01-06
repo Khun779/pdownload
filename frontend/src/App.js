@@ -8,7 +8,7 @@ const App = () => {
   const handleDownload = async () => {
     setDownloading(true);
     try {
-      const response = await axios.post('http://localhost:5000/download', { url }, { responseType: 'blob' });
+      const response = await axios.post('https://backend-service-uaag.onrender.com/download', { url }, { responseType: 'blob' });
       const downloadUrl = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = downloadUrl;

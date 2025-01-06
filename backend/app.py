@@ -30,5 +30,9 @@ def download():
         logging.error(f"Error downloading video: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Welcome to the YouTube Video Downloader API!"})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
